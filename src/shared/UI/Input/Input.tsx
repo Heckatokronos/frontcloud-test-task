@@ -3,6 +3,7 @@ import { Field, ErrorMessage, useField } from "formik";
 import "./Input.scss";
 
 type InputProps = {
+  id: string;
   name: string;
   label?: string;
   type?: string;
@@ -14,6 +15,7 @@ export const Input: React.FC<InputProps> = ({
   label,
   type = "text",
   placeholder,
+  id,
 }) => {
   const [field, meta] = useField(name);
 
@@ -21,11 +23,12 @@ export const Input: React.FC<InputProps> = ({
     <div>
       {label && <label htmlFor={name}>{label}</label>}
       <Field
-        id={name}
+        id={id}
         name={name}
         type={type}
         className="form-control"
         placeholder={placeholder}
+        style={{ width: '300px' }}
       />
       {meta.touched && meta.error ? (
         <ErrorMessage name={name} component="div" className="error" />

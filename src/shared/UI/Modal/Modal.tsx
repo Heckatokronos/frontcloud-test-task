@@ -21,5 +21,7 @@ export const Modal: React.FC = ({}, props) => {
     </div>
   );
 
-  return <div></div>;
+  return <div>
+    
+  </div>;
 };
