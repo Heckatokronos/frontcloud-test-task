@@ -1,0 +1,47 @@
+@use "../../../styles/index" as *;
+
+.selectContainer {
+  @include display-flex();
+  @include flex-direction-column();
+  padding-top: $padding;
+  font-size: $label-size;
+  width: 100%;
+
+  .label {
+    margin-bottom: 0.8rem;
+    @include width-fit-content();
+  }
+
+  .select {
+    background-color: #fff;
+    border: $border-color;
+    border-radius: 0.4rem;
+    padding: 0.75rem;
+    max-width: 20rem;
+    width: 100%;
+    color: #747474;
+    font-size: $label-size;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 0.2rem solid $color-purple;
+    }
+
+    .option {
+      color: $color-gray;
+    }
+  }
+
+  .errorContainer {
+    margin-top: 0.5rem;
+
+    .errorText {
+      color: #ff6060;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+  }
+}

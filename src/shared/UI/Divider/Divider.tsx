@@ -1,8 +1,5 @@
-import "./Divider.scss"
+import "./Divider.scss";
 
 export const Divider = () => {
-
-    return (
-        <div className="divider" />
-    )
-}
+  return <div className="divider" />;
+};
