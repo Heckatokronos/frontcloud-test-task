@@ -1,0 +1,36 @@
+.stepper-wrapper {
+  width: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 2rem;
+}
+
+.stepper-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.stepper-step-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-right: 16px;
+}
+
+.stepper-step-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button {
+  margin: auto;
+  margin-top: 3rem;
+}
