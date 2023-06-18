@@ -1,8 +1,7 @@
-import { Button } from "../Button/Button";
+import { Button } from "shared";
 import "./Modal.scss";
 
 export const Modal: React.FC = ({}, props) => {
-
   const ModalSuccess = (
     <div className="sucess">
       <h1>Форма успешно отправлена</h1>
@@ -21,5 +20,5 @@ export const Modal: React.FC = ({}, props) => {
     </div>
   );
 
-  return <div></div>;
+  return <div>{ModalSuccess || ModalFailed}</div>;
 };

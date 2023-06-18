@@ -1,8 +1,6 @@
-import "./Layout.scss";
+import { ILayoutProps } from "./types";
 
-interface ILayoutProps {
-  children: React.ReactNode;
-}
+import "./Layout.scss";
 
 export const Layout: React.FC<ILayoutProps> = ({ children }, props) => {
   const classes = "main " + props.className;

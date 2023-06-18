@@ -1,31 +1,46 @@
-import "./Card.scss";
+import { ICardProps } from "./types";
 
-interface ICardProps {
-  avatar: string;
-  alt: string;
-  fullName: string;
-  telegram: string;
-  github: string;
-  resume: string;
-}
+import styles from "./Card.module.scss";
 
 export const Card: React.FC<ICardProps> = ({
   avatar,
   alt,
   fullName,
-  telegram,
   github,
+  image,
   resume,
+  telegram,
 }) => {
   return (
-    <div className="card">
-      <img src={avatar} alt={alt} />
+    <div className={styles.card}>
+      <img className={styles.card__img} src={avatar} alt={alt} />
       <div>
-        <h3>{fullName}</h3>
-        <ul>
-          <li>{<a href={telegram}>Telegram</a>}</li>
-          <li>{<a href={github}>GitHub</a>}</li>
-          <li>{<a href={resume}>Resume</a>}</li>
+        <h3 className={styles.card__h3}>{fullName}</h3>
+        <ul className={styles.card__ul}>
+          <li>
+            {
+              <a href={telegram}>
+                <img src={image} alt={alt} />
+                Telegram
+              </a>
+            }
+          </li>
+          <li>
+            {
+              <a href={github}>
+                <img src={image} alt={alt} />
+                GitHub
+              </a>
+            }
+          </li>
+          <li>
+            {
+              <a href={resume}>
+                <img src={image} alt={alt} />
+                Resume
+              </a>
+            }
+          </li>
         </ul>
       </div>
     </div>

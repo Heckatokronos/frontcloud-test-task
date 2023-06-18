@@ -1,0 +1,44 @@
+
+$button-background: #5558fa;
+$button-transparent: transparent;
+
+//
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+
+  background: #5558fa;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+  }
+
+  &_primary {
+    background-color: $button-background;
+  }
+
+  &_outlined {
+    border: 1px solid $button-background;
+    background-color: transparent;
+    color: $button-background;
+
+    &:hover {
+      background-color: $button-background;
+      color: white;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+  }
+}
+
