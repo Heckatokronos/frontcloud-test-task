@@ -1,6 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import stepsSlice from "../entities/steps/model/stepsSlice";
+import boxesSlice from "entities/boxes/model/boxesSlice";
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  steps: stepsSlice,
+  boxes: boxesSlice,
+});
 
 const store = configureStore({
   reducer: rootReducer,

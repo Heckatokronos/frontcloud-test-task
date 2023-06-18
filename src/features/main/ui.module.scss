@@ -1,0 +1,55 @@
+$input-background: rgba(0, 0, 0, 0.04);
+$border-color: rgba(0, 0, 0, 0.16);
+
+@mixin input-style {
+  display: flex;
+  margin-top: 0.4vw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 12px;
+  gap: 12px;
+  margin-bottom: 16px;
+  width: 400px;
+
+  background: $input-background;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  max-width: auto;
+
+  a {
+    text-decoration: none;
+  }
+
+  input {
+    @include input-style;
+  }
+
+  button {
+    margin-top: 1vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    input {
+      width: 100%;
+    }
+  }
+}
