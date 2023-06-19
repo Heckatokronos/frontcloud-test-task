@@ -1,7 +1,6 @@
 import React from "react";
-
-import "./ui.scss";
 import { ButtonContainer } from "shared";
+
 
 export const Step2: React.FC = (props) => {
   return (

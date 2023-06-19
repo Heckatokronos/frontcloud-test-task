@@ -1,5 +1,5 @@
 const path = require("path");
-const resolve = require("resolve")
+const resolve = require("resolve");
 
 const srcPath = path.resolve(__dirname, "src");
 
@@ -13,7 +13,7 @@ module.exports = {
       "@entities": path.join(srcPath, "/entities"),
       "@features": path.join(srcPath, "/features"),
       "@pages": path.join(srcPath, "/pages"),
-      "@shared": path.join(srcPath, "/hooks"),
+      "@shared": path.join(srcPath, "/shared"),
     },
   },
   optimization: {

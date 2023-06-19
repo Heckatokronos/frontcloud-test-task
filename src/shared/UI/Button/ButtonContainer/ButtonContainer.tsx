@@ -1,5 +1,5 @@
 import { IButtonContainer } from "./types";
-
+import { selectStep, changeStep } from "entities/steps";
 import { useNavigate } from "react-router-dom";
 import {
   Button,
@@ -10,7 +10,6 @@ import {
 } from "shared";
 
 import styles from "./ButtonContainer.module.scss";
-import { selectStep, changeStep } from "entities/steps";
 
 export const ButtonContainer: React.FC<IButtonContainer> = ({
   id,
