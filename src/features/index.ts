@@ -7,6 +7,3 @@ export * from "./create/step1/ui";
 export * from "./create/step2/ui";
 export * from "./create/step3/ui";
 export * from "./create/stepper/ui";
-
-// Types
-export * from "./create/step2/model/types";

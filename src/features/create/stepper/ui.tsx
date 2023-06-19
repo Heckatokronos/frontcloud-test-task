@@ -1,6 +1,4 @@
-import { selectStep } from "entities/steps";
 import { useSelector } from "react-redux";
-import { Steps } from "shared";
 import { steps } from "./model/types";
 import {
   CheckMark,
@@ -12,6 +10,8 @@ import {
   StepWrapper,
   StepsLabelContainer,
 } from "./model/styled";
+import { Steps } from "entities/general";
+import { selectStep } from "entities/root/model/rootSlice";
 
 export const Stepper: React.FC = () => {
   const step = useSelector(selectStep);

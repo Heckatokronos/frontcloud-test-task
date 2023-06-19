@@ -1,10 +1,8 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import stepsSlice from "../entities/steps/model/stepsSlice";
-import boxesSlice from "entities/boxes/model/boxesSlice";
+import rootSlice from "entities/root/model/rootSlice";
 
 const rootReducer = combineReducers({
-  steps: stepsSlice,
-  boxes: boxesSlice,
+  root: rootSlice,
 });
 
 const store = configureStore({

@@ -1,15 +1,10 @@
 import { IButtonContainer } from "./types";
-import { selectStep, changeStep } from "entities/steps";
 import { useNavigate } from "react-router-dom";
-import {
-  Button,
-  Endpoints,
-  Steps,
-  useAppDispatch,
-  useAppSelector,
-} from "shared";
+import { Button, Endpoints, useAppDispatch, useAppSelector } from "shared";
+import { Steps } from "entities/general";
 
 import styles from "./ButtonContainer.module.scss";
+import { changeStep, selectStep } from "entities/root/model/rootSlice";
 
 export const ButtonContainer: React.FC<IButtonContainer> = ({
   id,

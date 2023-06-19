@@ -1,11 +1,3 @@
-import { Advantage } from "./step2/model/types";
-
-export interface CreateState {
-  step: string;
-  advantages: Advantage[];
-  checkbox: any;
-  radio: string;
-}
 
 export enum CreateInputs {
   Phone = "phone",

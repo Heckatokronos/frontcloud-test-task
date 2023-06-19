@@ -1,6 +1,7 @@
 import { Step1, Step2, Step3, Stepper } from "../../features";
-import { Steps, useAppSelector } from "shared";
-import { selectStep } from "entities/steps";
+import { useAppSelector } from "shared";
+import { selectStep } from "entities/root/model/rootSlice";
+import { Steps } from "entities/general";
 
 function CreatePage() {
   const step = useAppSelector(selectStep);

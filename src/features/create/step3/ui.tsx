@@ -1,4 +1,4 @@
-import { ButtonContainer } from "shared";
+import { ButtonContainer } from "features/buttonContainer/buttonContainer";
 
 export const Step3: React.FC = () => {
   return (

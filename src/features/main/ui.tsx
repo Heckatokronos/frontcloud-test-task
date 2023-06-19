@@ -1,12 +1,13 @@
-import { Button, Endpoints, Field, Steps, useAppDispatch } from "../../shared";
+import { Button, Endpoints, Field, useAppDispatch } from "../../shared";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { CreateInputs } from "features/create/types";
-import { changeStep } from "entities/steps";
 import { useForm } from "react-hook-form";
 import { MainType } from "./model/types";
 import { mainSchema } from "./model/schema";
+import { Steps } from "entities/general";
+import { changeStep } from "entities/root/model/rootSlice";
 
 export const MainComponent: React.FC = () => {
   const {

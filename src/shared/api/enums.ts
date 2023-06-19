@@ -3,12 +3,6 @@ export enum Sex {
   Woman = "Женщина",
 }
 
-export enum Steps {
-  One = "one",
-  Two = "two",
-  Three = "three",
-}
-
 export enum Endpoints {
   Main = "/",
   Form = "/create",

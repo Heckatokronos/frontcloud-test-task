@@ -1,10 +1,12 @@
-
+import { AboutMe, MainComponent } from "features";
 
 function MainPage() {
-    return (
-        <>
-        </>
-    )
+  return (
+    <>
+      <AboutMe />
+      <MainComponent />
+    </>
+  );
 }
 
 export default MainPage;

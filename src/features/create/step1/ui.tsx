@@ -2,18 +2,12 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Step1Type } from "./model/types";
 import { step1Schema } from "./model/schema";
-import {
-  ButtonContainer,
-  Field,
-  FormSelect,
-  Sex,
-  Steps,
-  useAppDispatch,
-} from "../../../shared";
-import { changeStep } from "entities/steps";
-import { getArrayFromEnum } from "entities/general";
+import { Field, FormSelect, Sex, useAppDispatch } from "shared";
+import { Steps, getArrayFromEnum } from "entities/general";
 import { useEffect } from "react";
 import { CreateInputs } from "../types";
+import { ButtonContainer } from "features/buttonContainer/buttonContainer";
+import { changeStep } from "entities/root/model/rootSlice";
 
 export const Step1: React.FC = () => {
   const {
