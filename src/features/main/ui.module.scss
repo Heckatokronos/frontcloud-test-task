@@ -1,7 +1,8 @@
 @use "../../shared/styles/" as *;
 
 .main {
-  height: 35rem;
+  max-width: 50rem;
+  height: 32rem;
   background-color: #fff;
   padding: $padding;
 
@@ -10,7 +11,6 @@
     @include flex-direction-column();
     @include justify-content(center);
     @include align-items(start);
-    
 
     button {
       margin-top: 1.2rem;
