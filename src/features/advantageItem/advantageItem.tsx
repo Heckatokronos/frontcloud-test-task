@@ -1,21 +1,24 @@
-import { SyntheticEvent, useCallback } from "react";
+import { SyntheticEvent, memo, useCallback } from "react";
 import { useAppDispatch, useAppSelector } from "shared";
 import { AdvantageItemProps } from "./types";
 import Trash from "shared/images/trash.svg";
-import { addAdvantage, findById, removeAdvantages, updateAdvantages } from "entities/root";
+import {
+  findById,
+} from "entities/root";
 
 import styles from "./advantageItem.module.scss";
+import { addAdvantages, removeAdvantage, updateAdvantage } from "entities/root/model/rootSlice";
 
-export const AdvantageItem = ({ advantage }: AdvantageItemProps) => {
+export const AdvantageItem = memo(({ advantage }: AdvantageItemProps) => {
   const dispatch = useAppDispatch();
-  const advantages = useAppSelector(addAdvantage);
+  const advantages = useAppSelector(addAdvantages);
 
   const index = findById(advantages, advantage.id);
 
   const updateAdvantagesCallback = useCallback(
     (e: SyntheticEvent) => {
       dispatch(
-        updateAdvantages({
+        updateAdvantage({
           id: advantage.id,
           text: (e.target as HTMLInputElement).value,
         })
@@ -25,7 +28,7 @@ export const AdvantageItem = ({ advantage }: AdvantageItemProps) => {
   );
 
   const removeAdvantageCallback = useCallback(() => {
-    dispatch(removeAdvantages({ id: advantage.id }));
+    dispatch(removeAdvantage({ id: advantage.id }));
   }, [dispatch, advantage.id]);
 
   return (
@@ -47,4 +50,4 @@ export const AdvantageItem = ({ advantage }: AdvantageItemProps) => {
       </div>
     </div>
   );
-};
+});

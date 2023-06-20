@@ -1,0 +1,21 @@
+@use "../../shared/styles/styles/" as *;
+
+.container {
+  max-width: 50rem;
+  @include height-fit-content();
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 2.4rem auto 0;
+  padding: 1.5rem 7rem 1rem;
+  padding-left: 1.5rem;
+
+  header {
+    padding-left: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form {
+    margin-top: -1rem;
+  }
+}

@@ -9,7 +9,7 @@ import { ButtonContainer } from "features/buttonContainer/buttonContainer";
 import { changeStep } from "entities/root/model/rootSlice";
 import { Sex } from "shared/UI/Input/Select/types";
 
-import styles from "./ui.module.scss"
+import styles from "./ui.module.scss";
 import { Steps, getArrayFromEnum } from "entities/root";
 
 export const Step1: React.FC = () => {

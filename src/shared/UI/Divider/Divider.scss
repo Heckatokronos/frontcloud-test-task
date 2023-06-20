@@ -1,5 +1,10 @@
 .divider {
+  width: 55rem;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   margin-top: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 0.5rem;
+
+  @media only screen and (max-width: 31.875em) {
+    width: 22rem;
+  }
 }

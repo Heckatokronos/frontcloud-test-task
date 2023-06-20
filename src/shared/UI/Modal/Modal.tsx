@@ -5,7 +5,7 @@ export const Modal: React.FC = ({}, props) => {
   const ModalSuccess = (
     <div className="sucess">
       <h1>Форма успешно отправлена</h1>
-      <Button type="button" id="button-to-main">
+      <Button type="button" variant="primary" id="button-to-main">
         На главную
       </Button>
     </div>
@@ -14,7 +14,7 @@ export const Modal: React.FC = ({}, props) => {
   const ModalFailed = (
     <div className="failed">
       <h1>Ошибка</h1>
-      <Button type="button" id="button-close">
+      <Button type="button" variant="primary" id="button-close">
         Закрыть
       </Button>
     </div>

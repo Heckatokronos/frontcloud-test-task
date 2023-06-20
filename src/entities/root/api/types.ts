@@ -1,28 +1,3 @@
-export interface Advantage {
-  id: string;
-  text: string;
-}
-
-export enum Endpoints {
-  Main = "/",
-  Form = "/create",
-  Error = "/error",
-}
-
-export interface Checkbox {
-  id: string;
-  name: string;
-  label: string;
-  checked?: boolean;
-}
-
-export interface Radio {
-  id: string;
-  name: string;
-  label: string;
-  value: string;
-}
-
 export const checkboxes: Checkbox[] = [
   {
     id: "field-checkbox-group-option-1",
@@ -44,12 +19,6 @@ export const checkboxes: Checkbox[] = [
   },
 ];
 
-interface CreateState {
-  step: string;
-  advantages: Advantage[];
-  checkbox: any;
-  radio: string;
-}
 export enum Steps {
   One = "one",
   Two = "two",
@@ -65,3 +34,35 @@ export const initialState: CreateState = {
   },
   radio: "",
 };
+
+export interface Advantage {
+  id: string;
+  text: string;
+}
+
+interface CreateState {
+  step: string;
+  advantages: Advantage[];
+  checkbox: any;
+  radio: string;
+}
+
+export enum Routes {
+  Main = "/",
+  Form = "/create",
+  Error = "/error",
+}
+
+export interface Checkbox {
+  id: string;
+  name: string;
+  label: string;
+  checked?: boolean;
+}
+
+export interface Radio {
+  id: string;
+  name: string;
+  label: string;
+  value: string;
+}

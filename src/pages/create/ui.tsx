@@ -9,12 +9,14 @@ function CreatePage() {
   const step = useAppSelector(selectStep);
 
   return (
-    <div>
-      <Stepper />
-      {step === Steps.One && <Step1 />}
-      {step === Steps.Two && <Step2 />}
-      {step === Steps.Three && <Step3 />}
-    </div>
+    <main className={styles.create}>
+      <div>
+        <Stepper />
+        {step === Steps.One && <Step1 />}
+        {step === Steps.Two && <Step2 />}
+        {step === Steps.Three && <Step3 />}
+      </div>
+    </main>
   );
 }
 

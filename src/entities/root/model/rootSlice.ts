@@ -3,20 +3,20 @@ import { Advantage, initialState } from "../api/types";
 import { RootState } from "app/store";
 import { findById } from "..";
 
-export const rootReducer = createSlice({
+export const rootSlice = createSlice({
   name: "root",
   initialState,
   reducers: {
-    addAdvantages: (state, action: PayloadAction<Advantage>) => {
+    addAdvantage: (state, action: PayloadAction<Advantage>) => {
       state.advantages.push(action.payload);
     },
-    removeAdvantages: (state, action: PayloadAction<{ id: string }>) => {
+    removeAdvantage: (state, action: PayloadAction<{ id: string }>) => {
       const advId = state.advantages.findIndex(
         (item) => item.id === action.payload.id
       );
       if (advId !== -1) state.advantages.splice(advId, 1);
     },
-    updateAdvantages: (state, action: PayloadAction<Advantage>) => {
+    updateAdvantage: (state, action: PayloadAction<Advantage>) => {
       const advId = findById(state.advantages, action.payload.id);
       state.advantages[advId].text = action.payload.text;
     },
@@ -42,18 +42,20 @@ export const rootReducer = createSlice({
   },
 });
 
+const { actions, reducer } = rootSlice;
+
 export const {
-  addAdvantages,
-  removeAdvantages,
-  updateAdvantages,
+  addAdvantage,
+  removeAdvantage,
+  updateAdvantage,
   changeStep,
   changeCheckbox,
   changeRadiobox,
   clearCheckboxes,
-} = rootReducer.actions;
+} = actions;
 
-export const addAdvantage = (state: RootState) => state.root.advantages;
-export const addAdvantageInput = (state: RootState) =>
+export const addAdvantages = (state: RootState) => state.root.advantages;
+export const addAdvantagesInput = (state: RootState) =>
   state.root.advantages.reduce(
     (acc, item: Advantage) => [...acc, item.text],
     [] as string[]
@@ -67,4 +69,4 @@ export const selectCheckboxNumbers = (state: RootState) =>
   state.root.checkbox.checkboxNumbers;
 export const selectRadiobox = (state: RootState) => state.root.radio;
 
-export default rootReducer.reducer;
+export default reducer;

@@ -6,15 +6,14 @@ import { CreateInputs } from "../types";
 import { useForm } from "react-hook-form";
 import { AdvantageItem } from "features/advantageItem/advantageItem";
 import { CheckboxGroup } from "features/checkboxes";
+import { Advantage, Steps } from "entities/root";
 import {
-  Advantage,
-  Steps,
   addAdvantage,
   addAdvantages,
   changeStep,
   clearCheckboxes,
   selectRadiobox,
-} from "entities/root";
+} from "entities/root/model/rootSlice";
 
 export const Step2: React.FC = () => {
   const {
@@ -24,7 +23,7 @@ export const Step2: React.FC = () => {
   } = useForm<any>();
 
   const dispatch = useAppDispatch();
-  const advantages = useAppSelector(addAdvantage);
+  const advantages = useAppSelector(addAdvantages);
   const radio = useAppSelector(selectRadiobox);
 
   const submitHandler = () => {
@@ -45,7 +44,7 @@ export const Step2: React.FC = () => {
           id="button-add"
           variant="outlined"
           type="button"
-          onClick={() => dispatch(addAdvantages({ id: v4(), text: "" }))}
+          onClick={() => dispatch(addAdvantage({ id: v4(), text: "" }))}
         >
           +
         </Button>

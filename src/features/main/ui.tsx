@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { MainType } from "./model/types";
 import { mainSchema } from "./model/schema";
 import { changeStep } from "entities/root/model/rootSlice";
-import { Endpoints, Steps } from "entities/root";
+import { Routes, Steps } from "entities/root";
 
 import styles from "./ui.module.scss";
 
@@ -31,7 +31,7 @@ export const MainComponent: React.FC = () => {
   const submitHandler = () => {
     localStorage.setItem("phone", control._getWatch("phone"));
     localStorage.setItem("email", control._getWatch("email"));
-    navigate(Endpoints.Form);
+    navigate(Routes.Form);
   };
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export const MainComponent: React.FC = () => {
   }, [dispatch, setValue]);
 
   return (
-    <div className={styles.main}>
+    <main className={styles.main}>
       <form onSubmit={handleSubmit(submitHandler)} className={styles.form}>
         <Field
           id="phone"
@@ -69,6 +69,6 @@ export const MainComponent: React.FC = () => {
           </Button>
         </Link>
       </form>
-    </div>
+    </main>
   );
 };

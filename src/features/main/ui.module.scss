@@ -1,16 +1,16 @@
 @use "../../shared/styles/" as *;
 
 .main {
-  max-width: 90rem;
-  width: 90%;
-  height: 70.4rem;
+  height: 35rem;
   background-color: #fff;
+  padding: $padding;
 
   .form {
     @include display-flex();
     @include flex-direction-column();
     @include justify-content(center);
     @include align-items(start);
+    
 
     button {
       margin-top: 1.2rem;
