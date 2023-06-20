@@ -3,6 +3,12 @@ export interface Advantage {
   text: string;
 }
 
+export enum Endpoints {
+  Main = "/",
+  Form = "/create",
+  Error = "/error",
+}
+
 export interface Checkbox {
   id: string;
   name: string;

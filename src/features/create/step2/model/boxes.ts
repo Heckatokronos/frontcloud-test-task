@@ -1,4 +1,4 @@
-import { Radio } from "entities/general";
+import { Radio } from "entities/root";
 
 export const radioButtons: Radio[] = [
   {

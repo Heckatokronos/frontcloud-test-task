@@ -6,9 +6,6 @@ type DefaultBoxProps = DetailedHTMLProps<
 >;
 
 export type CheckboxProps = DefaultBoxProps & {
-  id: string;
-  name: string;
-  value?: string;
-  type: "checkbox" | "radio";
-  label: string;
+  id?: string;
+  onChangeChecked?: (checked: boolean) => void;
 };

@@ -10,7 +10,7 @@ import {
   StepWrapper,
   StepsLabelContainer,
 } from "./model/styled";
-import { Steps } from "entities/general";
+import { Steps } from "entities/root";
 import { selectStep } from "entities/root/model/rootSlice";
 
 export const Stepper: React.FC = () => {

@@ -1,6 +1,5 @@
 // API + other
 export * from "./api/api";
-export * from "./api/enums";
 
 // Hooks
 export * from "./hooks/hooks";
@@ -15,6 +14,5 @@ export * from "./UI/Card/Card";
 export * from "./UI/Divider/Divider";
 export * from "./UI/Input/Input/Input";
 export * from "./UI/Input/Select/Select";
-export * from "./UI/Layout/Layout";
 export * from "./UI/LoadingSpinner/LoadingSpinner";
 export * from "./UI/Modal/Modal";

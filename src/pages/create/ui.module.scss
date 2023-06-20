@@ -1,0 +1,15 @@
+@use "../../shared/styles/" as *;
+
+.create {
+  max-width: 90rem;
+  @include height-fit-content();
+  background-color: #fff;
+  border-radius: 2.4rem;
+  margin: 2.4rem auto 0;
+  padding: 6.2rem 11rem 8rem;
+
+  /* 510px / 16px = 31.875em */
+  @media only screen and (max-width: 31.875em) {
+    padding: 2.5rem 4rem;
+  }
+}

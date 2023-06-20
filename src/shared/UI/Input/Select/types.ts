@@ -5,6 +5,11 @@ type DefaultProps = DetailedHTMLProps<
   HTMLSelectElement
 >;
 
+export enum Sex {
+  Man = "Мужчина",
+  Woman = "Женщина",
+}
+
 export type SelectProps = DefaultProps & {
   id?: string;
   name?: string;

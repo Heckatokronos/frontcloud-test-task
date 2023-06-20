@@ -6,6 +6,7 @@ export const AboutMe: React.FC = () => {
     <header>
       {MyBio.map((bio) => (
         <Card
+          key={bio.telegram}
           avatar={bio.avatar}
           alt={bio.alt}
           fullName={bio.fullName}

@@ -1,14 +1,17 @@
 import { useAppDispatch } from "shared/hooks/hooks";
 import { CheckboxProps } from "./types";
 import { ChangeEvent, useCallback } from "react";
-
-import styles from "./Checkboxes.module.scss";
 import { changeCheckbox } from "entities/root/model/rootSlice";
 
-export const Checkbox: React.FC<CheckboxProps> = (
-  { id, onChange, children, ...restProps },
-  props
-) => {
+import styles from "./checkboxes.module.scss";
+
+export const Checkbox: React.FC<CheckboxProps> = ({
+  id,
+  onChange,
+  onChangeChecked,
+  children,
+  ...restProps
+}) => {
   const dispatch = useAppDispatch();
 
   const onChangeFn = useCallback(
@@ -20,7 +23,7 @@ export const Checkbox: React.FC<CheckboxProps> = (
   );
 
   return (
-    <div>
+    <div className={styles.container}>
       <input
         id={id}
         type="checkbox"

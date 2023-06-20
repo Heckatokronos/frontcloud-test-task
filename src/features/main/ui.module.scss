@@ -1,55 +1,24 @@
-$input-background: rgba(0, 0, 0, 0.04);
-$border-color: rgba(0, 0, 0, 0.16);
+@use "../../shared/styles/" as *;
 
-@mixin input-style {
-  display: flex;
-  margin-top: 0.4vw;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 12px;
-  gap: 12px;
-  margin-bottom: 16px;
-  width: 400px;
+.main {
+  max-width: 90rem;
+  width: 90%;
+  height: 70.4rem;
+  background-color: #fff;
 
-  background: $input-background;
-  border: 1px solid $border-color;
-  border-radius: 4px;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 8px;
-  max-width: auto;
-
-  a {
-    text-decoration: none;
-  }
-
-  input {
-    @include input-style;
-  }
-
-  button {
-    margin-top: 1vw;
-  }
-}
-
-@media (max-width: 767px) {
   .form {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    @include display-flex();
+    @include flex-direction-column();
+    @include justify-content(center);
+    @include align-items(start);
 
-    input {
-      width: 100%;
+    button {
+      margin-top: 1.2rem;
+
+      /* 380px / 16px = 23.75em */
+      @media only screen and (max-width: 23.75em) {
+        width: 100%;
+      }
     }
   }
 }

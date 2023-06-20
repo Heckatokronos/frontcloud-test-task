@@ -1,6 +1,6 @@
 import { InferType } from "yup";
 import { step1Schema } from "./schema";
-import { Sex } from "shared";
+import { Sex } from "shared/UI/Input/Select/types";
 
 export interface IStep1Inputs {
   nickname: string;

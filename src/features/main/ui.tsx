@@ -1,4 +1,4 @@
-import { Button, Endpoints, Field, useAppDispatch } from "../../shared";
+import { Button, Field, useAppDispatch } from "../../shared";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -6,8 +6,10 @@ import { CreateInputs } from "features/create/types";
 import { useForm } from "react-hook-form";
 import { MainType } from "./model/types";
 import { mainSchema } from "./model/schema";
-import { Steps } from "entities/general";
 import { changeStep } from "entities/root/model/rootSlice";
+import { Endpoints, Steps } from "entities/root";
+
+import styles from "./ui.module.scss";
 
 export const MainComponent: React.FC = () => {
   const {
@@ -43,28 +45,30 @@ export const MainComponent: React.FC = () => {
   }, [dispatch, setValue]);
 
   return (
-    <form onSubmit={handleSubmit(submitHandler)}>
-      <Field
-        id="field-phone-number"
-        name="Номер телефона"
-        label="Номер телефона"
-        placeholder="+7 999 999-99-99"
-        error={errors.phone?.message}
-        control={control}
-      />
-      <Field
-        id="field-email"
-        name="Email"
-        label="Email"
-        placeholder="tim.jennings@example.com"
-        error={errors.email?.message}
-        control={control}
-      />
-      <Link to="/create">
-        <Button type="submit" id="button-start" variant="primary">
-          Начать
-        </Button>
-      </Link>
-    </form>
+    <div className={styles.main}>
+      <form onSubmit={handleSubmit(submitHandler)} className={styles.form}>
+        <Field
+          id="phone"
+          name="phone"
+          label="Номер телефона"
+          placeholder="+7 999 999-99-99"
+          error={errors.phone?.message}
+          control={control}
+        />
+        <Field
+          id="email"
+          name="email"
+          label="Email"
+          placeholder="tim.jennings@example.com"
+          error={errors.email?.message}
+          control={control}
+        />
+        <Link to="/create">
+          <Button type="submit" id="button-start" variant="primary">
+            Начать
+          </Button>
+        </Link>
+      </form>
+    </div>
   );
 };

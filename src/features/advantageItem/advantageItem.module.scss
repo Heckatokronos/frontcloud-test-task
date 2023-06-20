@@ -1,0 +1,62 @@
+@use "../../shared/styles/index.scss" as *;
+
+.inputContainer {
+  @include display-flex();
+  @include align-items(center);
+  padding: 0.4rem 0;
+  font-size: $label-size;
+
+  &:nth-of-type(1) {
+    padding: 0.8rem 0 0.4rem;
+  }
+
+  .input {
+    background-color: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.16);
+    border-radius: 0.4rem;
+    padding: 0.75rem;
+    max-width: 20rem;
+    width: 100%;
+    font-size: $label-size;
+
+    &:focus {
+      outline: 0.2rem solid $color-purple;
+    }
+  }
+
+  .removeIconContainer {
+    margin-left: 0.75rem;
+
+    .removeButton {
+      border: none;
+      background-color: #fff;
+
+      &:hover {
+        cursor: pointer;
+
+        .icon {
+          @include prefix(
+            filter,
+            invert(38%) sepia(62%) saturate(6494%) hue-rotate(232deg)
+              brightness(103%) contrast(96%),
+            webkit
+          );
+        }
+      }
+    }
+
+    .icon {
+      width: 1rem;
+    }
+  }
+
+  .errorContainer {
+    margin-top: 0.5rem;
+
+    .errorText {
+      color: #ed4d59;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+  }
+}

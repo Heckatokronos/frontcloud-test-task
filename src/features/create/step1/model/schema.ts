@@ -1,7 +1,7 @@
 import { ObjectSchema, object, string } from "yup";
 import { IStep1Inputs } from "./types";
 import { Validations } from "features/create/types";
-import { Sex } from "shared";
+import { Sex } from "shared/UI/Input/Select/types";
 
 export const phoneRegEx =
   /^\+?[\d]\s?\(?[\d]{3}\)?\s?[\d]{3}-?[\d]{2}-?[\d]{2}$/;
