@@ -14,6 +14,7 @@ import {
   clearCheckboxes,
   selectRadiobox,
 } from "entities/root/model/rootSlice";
+import { RadioboxGroup } from "features/radioboxes/radioboxGroup/radioboxGroup";
 
 export const Step2: React.FC = () => {
   const {
@@ -45,11 +46,13 @@ export const Step2: React.FC = () => {
           variant="outlined"
           type="button"
           onClick={() => dispatch(addAdvantage({ id: v4(), text: "" }))}
+          style={{ marginTop: "0.3rem" }}
         >
           +
         </Button>
       </div>
       <CheckboxGroup control={control} />
+      <RadioboxGroup control={control} />
       <ButtonContainer id="2" buttonPrevState="Назад" buttonNextState="Далее" />
     </form>
   );

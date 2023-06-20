@@ -1,0 +1,12 @@
+@use "../../../shared/styles/" as *;
+
+.container {
+  font-size: $label-size;
+  @include display-flex();
+  @include align-items(center);
+  margin-top: 0.1rem;
+
+  .label {
+    padding-left: 0.5rem;
+  }
+}

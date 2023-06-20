@@ -1,8 +1,8 @@
 import { Controller } from "react-hook-form";
 import { Checkbox } from "../checkbox/checkbox";
-import { ICheckboxGroup } from "./types";
+import { ICheckboxField } from "./types";
 
-export const CheckoxField: React.FC<ICheckboxGroup> = ({
+export const CheckoxField: React.FC<ICheckboxField> = ({
   id,
   name,
   control,

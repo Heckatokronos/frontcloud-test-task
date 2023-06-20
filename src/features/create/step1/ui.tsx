@@ -8,8 +8,6 @@ import { CreateInputs } from "../types";
 import { ButtonContainer } from "features/buttonContainer/buttonContainer";
 import { changeStep } from "entities/root/model/rootSlice";
 import { Sex } from "shared/UI/Input/Select/types";
-
-import styles from "./ui.module.scss";
 import { Steps, getArrayFromEnum } from "entities/root";
 
 export const Step1: React.FC = () => {
@@ -63,7 +61,7 @@ export const Step1: React.FC = () => {
   }, [setValue]);
 
   return (
-    <form onSubmit={handleSubmit(submitHandler)} className={styles.form}>
+    <form onSubmit={handleSubmit(submitHandler)}>
       <Field
         id="field-nickname"
         name={CreateInputs.Nickname}
